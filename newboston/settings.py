@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # activate models in apps
+    'music.apps.MusicConfig',
 ]
 
 MIDDLEWARE = [
