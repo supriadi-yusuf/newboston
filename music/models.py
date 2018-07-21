@@ -1,13 +1,13 @@
 from django.db import models
 
 # Create your models here.
-Class Album( models.Model):
-    artis = models.CharField(max-length=250)
-    title = models.CharField(max-length=500)
-    genre = models.CharField(max-length=100)
-    logo = models.CharField(max-length=1000)
+class Album(models.Model):
+    artis = models.CharField(max_length=250)
+    title = models.CharField(max_length=500)
+    genre = models.CharField(max_length=100)
+    logo = models.CharField(max_length=1000)
 
-Class Song(models.Model):
+class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
-    file_type = models.CharField(max-length=10)
-    title = models.CharField(max-length=250)
+    file_type = models.CharField(max_length=10)
+    title = models.CharField(max_length=250)
