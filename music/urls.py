@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from . import views
 
+app_name = "music_app" # this is url name space
+
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
     #url(r'^music/', include('music.urls')),
