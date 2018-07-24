@@ -1,14 +1,17 @@
 <!-- Loads the path to your static files -->
 {% load staticfiles %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><!-- bootstrap -->
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'><!-- font from google -->
 <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><!-- jquery -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- bootstrap js -->
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid"><!-- "container-fluid" takes entire width of page -->
 
-        <!-- Logo -->
+        <!-- header -->
         <div class="navbar-header"><!-- "navbar-header" is for logo -->
-            <a class="navbar-brand" href="{% url 'music_app:album_list' %}">Viber</a>
+            <a class="navbar-brand" href="{% url 'music_app:album_list' %}">Viberr</a>
         </div>
     </div>
 </nav>
