@@ -1,3 +1,7 @@
 body{
   background:  url('images/background.png') blue;
 }
+
+.navbar{
+  border-radius: 0;//make navigation bar has square edge instead of curve edge
+}
