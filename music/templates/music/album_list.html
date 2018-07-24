@@ -3,7 +3,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
 
+<nav class="navbar navbar-default">
+    <div class="container-fluid"><!-- "container-fluid" takes entire width of page -->
 
+        <!-- Logo -->
+        <div class="navbar-header"><!-- "navbar-header" is for logo -->
+            <a class="navbar-brand" href="{% url 'music_app:album_list' %}">Viber</a>
+        </div>
+    </div>
+</nav>
 
 {% if all_albums %}
   <h3>There are {{ all_albums.count }} albums :</h3>
