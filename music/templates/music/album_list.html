@@ -1,3 +1,8 @@
+<!-- Loads the path to your static files -->
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+
 {% if all_albums %}
   <h3>There are {{ all_albums.count }} albums :</h3>
   <ul>
