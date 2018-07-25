@@ -3,6 +3,7 @@ from .models import Album, Song
 
 class IndexView(generic.ListView): # there is no rule for class name here
     template_name = 'music/album_list.html'
+    context_object_name = 'all_albums'
 
     def get_queryset(self):
         return Album.objects.all()
