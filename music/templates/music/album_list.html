@@ -2,10 +2,10 @@
 
 {% block content %}
 
-  {% if all_albums %}
-    <h3>There are {{ all_albums.count }} albums :</h3>
+  {% if object_list %}
+    <h3>There are {{ object_list.count }} albums :</h3>
     <ul>
-    {% for album in all_albums %}
+    {% for album in object_list %}
        <li><a href="{% url 'music_app:album_detail' album.id %}">{{album.title}}</a></li>
     {% endfor %}
     </ul>
