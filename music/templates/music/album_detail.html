@@ -1,3 +1,67 @@
+<!-- Loads the path to your static files -->
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><!-- bootstrap -->
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'><!-- font from google -->
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><!-- jquery -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- bootstrap js -->
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid"><!-- "container-fluid" takes entire width of page -->
+
+        <!-- header -->
+        <div class="navbar-header"><!-- "navbar-header" is for logo -->
+
+           <!-- Add conditional button. This button appears when screen can not display all items -->
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+           </button>
+
+            <a class="navbar-brand" href="{% url 'music_app:album_list' %}">Viberr</a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active"><!-- 'active' will make white letters on black -->
+                    <a href="#">
+                        <span class="glyphicon glyphicon-cd" area-hidden="true"></span>&nbsp; Albums
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-music" area-hidden="true"></span>&nbsp; Songs
+                    </a>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="">
+                </div>
+
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Album
+                    </a>
+                </li>
+                <li class="">
+                  <a href="">
+                      <span class="glyphicon glyphicon-off"></span>&nbsp; Logout
+                  </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
 <img src="{{album.logo}}" height="100px" width="100px" alt="image not found"/>
 
 <h1>{{album.title}}</h1>
