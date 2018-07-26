@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Album(models.Model):
@@ -6,6 +7,11 @@ class Album(models.Model):
     title = models.CharField(max_length=500)
     genre = models.CharField(max_length=100)
     logo = models.CharField(max_length=1000)
+
+    #whenever data is inserted then run this function
+    def get_absolute_url(self):
+        # take to url named as 'music_app:album_detail' with some pamaeters (kwargs)
+        return reverse('music_app:album_detail', kwargs={'pk': self.pk})
 
     def __str__(self): # string representation of object
         return self.artist + " - " + self.title
