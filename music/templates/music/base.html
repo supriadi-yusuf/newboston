@@ -7,6 +7,14 @@
   <body>
     <!-- since we use static files so we need to load them -->
     {% load staticfiles %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'music/images/favicon.ico' %}">
+    <!--link rel="shortcut icon" type="image/x-icon" href="{% static 'music/images/favicon.ico' %}"-->
+    <!--link rel="shortcut icon" href="{%  static 'favicon.ico' %}"-->
+    <!--link rel="shortcut icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico"-->
+
+    <!-- link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><!-- bootstrap -->
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'><!-- font from google -->
     <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
