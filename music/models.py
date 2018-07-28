@@ -11,7 +11,7 @@ class Album(models.Model):
     #whenever data is inserted then run this function
     def get_absolute_url(self):
         # take to url named as 'music_app:album_detail' with some pamaeters (kwargs)
-        return reverse('music_app:album_detail', kwargs={'pk': self.pk})
+        return reverse('music_app:album-detail', kwargs={'pk': self.pk})
 
     def __str__(self): # string representation of object
         return self.artist + " - " + self.title

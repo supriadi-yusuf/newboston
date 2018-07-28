@@ -34,13 +34,13 @@
                   <span class="icon-bar"></span>
                </button>
 
-                <a class="navbar-brand" href="{% url 'music_app:album_list' %}">Viberr</a>
+                <a class="navbar-brand" href="{% url 'music_app:album-list' %}">Viberr</a>
             </div>
 
             <!-- Items -->
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul class="nav navbar-nav">
-                    <li class="{% block album_active %}{% endblock %}"><!-- 'active' will make white letters on black -->
+                    <li class="{% block albums_active %}{% endblock %}"><!-- 'active' will make white letters on black -->
                         <a href="#">
                             <span class="glyphicon glyphicon-cd" area-hidden="true"></span>&nbsp; Albums
                         </a>
