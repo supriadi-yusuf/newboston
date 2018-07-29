@@ -18,10 +18,11 @@ class Album(models.Model):
         return self.artist + " - " + self.title
 
 class Song(models.Model):
-    album = models.ForeignKey(Album, on_delete=models.CASCADE)
-    file_type = models.CharField(max_length=10)
     title = models.CharField(max_length=250)
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
     is_favorite = models.BooleanField(default=False)
+    # file_type = models.CharField(max_length=10)
+    audio_file = models.FileField(default=None, upload_to='lagu')
 
     def __str__(self):
         return self.title
