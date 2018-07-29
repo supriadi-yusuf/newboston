@@ -15,7 +15,7 @@
           <div class="panel-body">
             <a href="{% url 'music_app:album-detail' album.id %}">
               {% if album.logo %}
-                <img src="{{album.logo}}" class="img-responsive">
+                <img src="{{album.logo.url}}" class="img-responsive">
               {% else %}
                 <h3>No image to display</h3>
               {% endif %}
