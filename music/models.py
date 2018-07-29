@@ -6,7 +6,8 @@ class Album(models.Model):
     artist = models.CharField(max_length=250)
     title = models.CharField(max_length=500)
     genre = models.CharField(max_length=100)
-    logo = models.CharField(max_length=1000)
+    #logo = models.CharField(max_length=1000)
+    logo = models.ImageField( default=None, blank=True, null=True)
 
     #whenever data is inserted then run this function
     def get_absolute_url(self):
