@@ -23,4 +23,10 @@ urlpatterns = [
     # /music/2/delete/
     url(r'^(?P<pk>\d+)/delete/$', views.AlbumDelete.as_view(), name='album-delete'),
 
+    # /music/register
+    url(r'^register/$', views.UserFormView.as_view(), name='register'),
+
+    # /music/logout
+    url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
+
 ]
