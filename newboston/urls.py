@@ -21,6 +21,7 @@ from django.conf.urls.static import static # by spd
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^music/', include('music.urls')),
+    url(r'^rest_api/', include('rest_api.urls')),
 ]
 
 # by spd
