@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # activate models in apps
+    # spd:since we use django rest framework. the framework should be registered
+    'rest_framework',
+    # spd:activate models in apps
     'music.apps.MusicConfig',
+    'rest_api.apps.RestApiConfig',
 ]
 
 MIDDLEWARE = [
