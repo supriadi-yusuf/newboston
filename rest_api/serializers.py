@@ -8,3 +8,9 @@ class StockSerializer(serializers.ModelSerializer):
         model = Stock # spd - specify model's name
         # fields = '__all__' # spd - display all fields
         fields = ('ticker', 'volume') # spd - suppose we only display these two fields
+
+# spd - create another serializer for creating new stock. This is for trial only.
+class StockSerializerCreate(serializers.ModelSerializer):
+    class Meta:
+        model = Stock
+        fields = ['ticker', 'open', 'close', 'volume']
