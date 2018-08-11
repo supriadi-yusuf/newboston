@@ -7,7 +7,7 @@ from .serializers import StockSerializer, StockSerializerCreate
 
 # Create your views here.
 
-class StockList(APIView):
+class StockListView(APIView):
 
     # spd - display stock
     def get(self, request):
@@ -23,3 +23,9 @@ class StockList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class StockView(APIView):
+    def get(self, request, pk):
+        stocks = Stock.objects.get(pk=pk)
+        serializer = StockSerializer( stocks) # specify objects that would be serializer and many of them or not
+        return Response(serializer.data)
