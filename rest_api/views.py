@@ -5,9 +5,13 @@ from rest_framework import status
 from .models import Stock
 from .serializers import StockSerializer, StockSerializerCreate
 
+from rest_framework import permissions #spd: need this modul for permissions
+
 # Create your views here.
 
 class StockListView(APIView):
+
+    permission_classes = (permissions.AllowAny,) #spd : set permission here
 
     # spd - display stock
     def get(self, request):

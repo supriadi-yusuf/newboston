@@ -12,6 +12,7 @@ class IndexView(generic.ListView): # there is no rule for class name here
     context_object_name = 'all_albums'
 
     def get_queryset(self):
+    #def get_queryset(self,request):
         return Album.objects.all()
     #model = Album
 
@@ -36,12 +37,12 @@ class UserFormView(View):
     template_name = "music/registration.html"
 
     # display blank form
-    def get( self, request):
+    def get( self, request): # spd : GET method
         form = self.form_class(None) # None means that there is no information is passed
         return render( request, self.template_name, { 'form': form})
 
     # process form data
-    def post( self, request):
+    def post( self, request): # POST method
         form = self.form_class( request.POST) # request.POST means passing form data
         if form.is_valid():
             user = form.save(commit=False) # create object but do not enter data to db ( not save to db)
